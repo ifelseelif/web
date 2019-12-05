@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="pipLab2_war">
+    <output-path>$PROJECT_DIR$/out/artifacts/pipLab2_war</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="pipLab2" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="pipLab2/web/Web" />
+    </root>
+  </artifact>
+</component>

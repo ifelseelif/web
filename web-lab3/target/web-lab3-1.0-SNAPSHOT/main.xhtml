@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:p="http://primefaces.org/ui"
+        xmlns:h="http://java.sun.com/jsf/html">
+<ui:composition template="templates/template_layout.xhtml">
+
+    <ui:define name="header">
+        <title>Лабораторная №3 - часы</title>
+        <h:outputStylesheet library="stylesheets" name="main.css"/>
+        <meta name="description"
+              content="Лабораторная работа №3 по дисциплине веб-программирование - Main page"/>
+    </ui:define>
+
+    <ui:define name="content">
+        <div class="wrapper">
+            <div>
+                <canvas id="canvas" width="300px" height="300px"></canvas>
+                <h:outputScript library="js" name="graph.js"/>
+            </div>
+            <div>
+                <!--TODO Поменять input -->
+                <h:form id="form" prependId="false">
+                    <h:panelGrid columns="2" cellpadding="5" styleClass="ui-grid">
+
+
+                        <h:outputLabel value="X: "/>
+                        <p:spinner id="x" value="#{pointBean.x}" min="-4" max="4" stepFactor="0.25"/>
+
+                        <h:outputLabel value="Y: "/>
+                        <h:inputText id="y" maxlength="2" value="#{pointBean.y}"/>
+
+                        <h:outputLabel value="R: "/>
+                        <div>
+                            <p:commandLink value="1"/>
+                            <p:commandLink value="2"/>
+                            <p:commandLink value="3"/>
+                            <p:commandLink value="4"/>
+                            <p:commandLink value="5"/>
+                        </div>
+
+                        <p:commandButton id="checkButton"  onclick="sendRequest1()" update="res-x res-y res-r" value="Submit"/>
+                        <p:remoteCommand name="sendRequest" update="res-x res-y res-r" action="#{mainBean.validate}"/>
+                    </h:panelGrid>
+
+                </h:form>
+                <p:outputLabel id="res-x" value="#{pointBean.x}"/>
+                <br/>
+                <p:outputLabel id="res-y" value="#{pointBean.y}"/>
+                <br/>
+                <p:outputLabel id="res-r" value="#{pointBean.r}"/>
+            </div>
+        </div>
+
+    </ui:define>
+</ui:composition>
+</html>

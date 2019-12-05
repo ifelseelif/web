@@ -1,0 +1,6 @@
+.wrapper>div{
+    width: auto;
+    height: auto;
+    display: inline-block;
+    margin-left: 100px;
+}

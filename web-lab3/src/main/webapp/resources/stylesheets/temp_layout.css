@@ -1,0 +1,31 @@
+#footer {
+    position: fixed; /* Фиксированное положение */
+    left: 0; bottom: 0; /* Левый нижний угол */
+    color: black; /* Цвет текста */
+    width: 100%; /* Ширина слоя */
+    background-color: #f1f1f1;
+    padding: 15px;
+}
+
+
+.header{
+    overflow: hidden;
+    background-color: #f1f1f1;
+    padding: 20px 10px;
+}
+
+.header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+.header-right {
+    float: right;
+}
+

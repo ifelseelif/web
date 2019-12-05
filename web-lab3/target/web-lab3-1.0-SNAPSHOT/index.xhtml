@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<ui:composition template="templates/template_layout.xhtml">
+
+    <ui:define name="header">
+        <title>Лабораторная №3 - часы</title>
+        <h:outputStylesheet library="stylesheets" name="index.css"/>
+        <meta name="description"
+              content="Лабораторная работа №3 по дисциплине веб-программирование - страница с часами"/>
+    </ui:define>
+
+    <ui:define name="content">
+        <div class="box">
+            <h2>Time:</h2>
+            <h1 id="clock"/>
+            <h4 id="timer"/>
+            <a href="main.xhtml">На главную</a>
+            <h:outputScript library="js" name="clock.js"/>
+        </div>
+    </ui:define>>
+</ui:composition>
+</html>
